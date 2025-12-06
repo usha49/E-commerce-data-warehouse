@@ -3,7 +3,7 @@ from library.Variables import Variables
 from library.Database import Database
 import os
 
-table_name = os.path.basename(__file__).split('.')[0]
+table_name = os.path.basename(__file__).split('_loader.')[0]
 tmp_table_name = f"dim_{table_name}"
 logger = Logger(tmp_table_name)
 db = Database(logger)
